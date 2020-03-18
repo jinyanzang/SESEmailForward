@@ -15,7 +15,7 @@ exports.handler = function(event, context) {
     headers += "Reply-To: " + msgInfo.mail.commonHeaders.from[0] + "\r\n";
     headers += "X-Original-To: " + msgInfo.mail.commonHeaders.to[0] + "\r\n";
     headers += "To: " + forwardTo + "\r\n";
-    headers += "Subject: Fwd: " + msgInfo.mail.commonHeaders.subject + "\r\n";
+    headers += "Subject: " + msgInfo.mail.commonHeaders.subject + "\r\n";
 
     if (email) {
         var res;
